@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #kotak{
+      display: none;
+      width: 200px;
+      height: 200px;
+      margin: auto auto;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="inputan">
+  <p id="kotak"></p>
+  <script>
+    var inp = document.getElementById('inputan');
+    inp.addEventListener('keyup',function(){
+      if(this.value in {'a': 1,'b':2,'c':3}){
+        console.log(this.value)
+        document.getElementById('kotak').style.display = block;
+      }
+      else{
+        console.log(this.value)
+        document.getElementById('kotak').style.backgroundColor = green;
+        document.getElementById('kotak').style.display = block;
+        
+      }
+    });
+  </script>
+</body>
+</html>

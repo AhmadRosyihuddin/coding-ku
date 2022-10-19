@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>For Array IF</title>
+	<style>
+		body{
+			background-color: grey;
+			font-family: cursive;
+		}
+		.container{
+			background-color: gold;
+			width: 900px;
+			height: auto;
+			margin: auto;
+			padding: 3px;
+			text-align: center;
+		}
+		.kotakJawaban{
+			background-color: red;
+			width: 500px;
+			height: auto;
+			margin: auto;
+			text-align: left;
+			padding-left: 30px;
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<p>1. hitung Z = 2x + 15x,<br>dengn nilai X: bilangan genap dari 10 s/d 50<br></p>
+	<button onclick="soal1()">Klik Disini Untuk Hasil</button>
+	<p id="demo1" class="kotakJawaban"></p>
+
+	<p>2. buat fungsi untuk menampilkan 20 angka bulat acak dari a s/d b. data acak disimpan di array.<br>note : a dan b diinputkan.
+		<br>Masukkan Angka Min
+		<input type="number" id="awal"> Masukkan Angka Max
+		<input type="number" id="akhir">
+		<button onclick="soal2()">Tampilkan</button>
+	</p>
+	<p id="demo2" class="kotakJawaban"></p>
+	<p>
+		<div class="kotakJawaban">3. Cari Min, Max, Mean, Modus, Median
+		<p>Min = <span id="min"></span></p>
+		<p>Max = <span id="max"></span></p>
+		<p>Mean = <span id="mean"></span></p>
+		<p>Modus = <span id="modus"></span></p>
+		<p>Median = <span id="median"></span></p>
+	</div>
+	</p>
+</div>
+	<script src="array.js"></script>
+</body>
+</html>

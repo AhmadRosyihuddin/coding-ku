@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onchange</title>
+</head>
+<body>
+	<h1>Pilih Yang Anda Suka</h1>
+	Silahkan Pilih : <select id="pilih" onchange="pilihan()">
+		<option>Mobil</option>
+		<option>Motor</option>
+		<option>Emas</option>
+		<option>Rumah</option>
+	</select>
+	<p id="kos">Pilihan Anda : </p>
+	<script>
+		function pilihan(){
+			var x = document.getElementById('pilih').value;
+			document.getElementById('kos').innerHTML = 'Pilihan Anda : '+x
+		}
+	</script>
+</body>
+</html>

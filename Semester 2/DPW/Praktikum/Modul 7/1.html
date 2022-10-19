@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TR 7</title>
+    <style>
+        button{
+            background-color:orangered;
+            border: none;
+            width: 200px;
+            height: 50px;
+            font-size: medium;
+            
+        }
+        .btn{
+            border: 2px solid black;
+        }
+        button:hover{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body bgcolor="gold" style="text-align:center;">
+    <h1>Berapa Usia Anda??</h1>
+    <button class="btn" id="klik">CEK</button>
+
+    <script>
+        var nama, tgl, tgl_now, bulan, bulan_now, tahun, tahun_now, lahir, tombol, now, usia, temp;
+        tombol = document.getElementById('klik');
+        tombol.addEventListener('click',function(){
+            nama = prompt('Masukkan Nama Anda:','Nama');
+            if(nama){
+                temp = prompt('Masukkan Tanggal Lahir Anda Dengan Format (YYYY-MM-DD)')
+                if(temp){
+                    lahir = new Date(temp)
+                    tgl = lahir.getDate()
+                    bulan = lahir.getMonth()+1
+                    tahun = lahir.getFullYear()
+
+                    now = new Date() 
+                    tahun_now = now.getFullYear()
+                    usia = tahun_now - tahun
+                    alert('Nama : '+nama+'\nTanggal Lahir : '+tgl+'-'+bulan+'-'+tahun+'\nUsia : '+usia+' Tahun')
+                }
+                else{
+                    alert(':v Anda Belum Memasukkan Tanggal Lahir')
+                }
+
+            }
+            else{
+                alert('Thanks')
+            }
+        })
+    </script>
+</body>
+</html>

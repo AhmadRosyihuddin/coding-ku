@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Looping JQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Looping (JQuery)</h1>
+	<form onsubmit="return false">
+		Masukkan Angka : <input type="number" class="angka">
+		<button class="click">Click</button>
+	</form>
+	<p id="p"></p>
+
+	<script>
+		$('.click').click(function() {
+			var b = $('.angka').val();
+			var kos = "";
+			for(let y = 1; y <= b; y++){
+				 kos +=b + "<br>"
+			}
+			document.getElementById("p").innerHTML = "<p>"+kos+"</p>";
+		})
+	</script>
+</body>
+</html>

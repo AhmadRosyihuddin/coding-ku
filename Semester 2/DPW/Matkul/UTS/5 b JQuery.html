@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>JQuery Inputan Nama Dan Angka</h1>
+	Nama
+	<input type="text" class="nama"> Angka
+	<input type="number" class="angka">
+	<input type="submit" class="submit" value="Kirim">
+	<p id="p"></p>
+
+	<script type="text/javascript">
+		$('.submit').click(function() {
+			var a = $('.nama').val();
+			var b = $('.angka').val();
+			var kos = "";
+			for(let y = 1; y <= b*2; y++){
+				 kos += y+'. ' + a + "<br>"
+			}
+			document.getElementById("p").innerHTML = "<p>"+kos+"</p>";
+		})
+	</script>
+</body>
+</html>

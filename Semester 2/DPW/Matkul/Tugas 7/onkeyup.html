@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Onkeyup</title>
+</head>
+<body bgcolor="grey">
+	<center>
+		<form>
+			<table border="1" bgcolor="yellow">
+				<th colspan="2">DAFTAR MAKANAN</th>
+				<tr>
+					<td>MENU</td>
+					<td>HARGA</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="makanan" value="10000" onclick="fungsiku(value)">Bakso<br>
+						<input type="radio" name="makanan" value="7000" onclick="fungsiku(value)">Mie<br>
+						<input type="radio" name="makanan" value="11000" onclick="fungsiku(value)">Nasgor<br>
+					</td>
+					<td>
+						Rp. 10.000<br>
+						Rp. 7.000<br>
+						Rp. 11.000<br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Porsi : <input type="text" id="porsi" onkeyup="hitung()">
+					</td>
+					<td>	
+						Total Harga : <input type="text" name="total" id="totalharga" value="0">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="reset" value="Hapus">
+						<input type="submit" value="Kirim">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</center>
+	<script>
+		function fungsiku(makanan) {
+			var harga = document.getElementById('totalharga').value = makanan;
+		}
+		function hitung(){
+			var jumlah = document.getElementById('porsi').value;
+			var harga = document.getElementById('totalharga').value;
+			var hasil = harga * jumlah
+			document.getElementById('totalharga').value = hasil
+		}
+	</script>
+</body>
+</html>

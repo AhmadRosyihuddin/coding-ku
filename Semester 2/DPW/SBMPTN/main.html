@@ -1,0 +1,280 @@
+<!DOCTYPE html> 
+<html lang="id">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143196243-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-143196243-1');
+
+	gtag('event', 'play', { 'event_category': 'Server Name', 'event_action': 'Server', 'event_label': window.location.hostname });
+	gtag('event', 'play', { 'event_category': 'Page Name', 'event_action': 'Page', 'event_label': 'index.html' });
+	</script>
+	<!-- End Google Analytics -->
+	<title>Pengumuman SBMPTN LTMPT 2021</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png">
+	<link rel="manifest" href="images/icon/site.webmanifest">
+	<link rel="mask-icon" href="images/icon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="images/icon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="images/icon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+	<link rel="stylesheet" href="bootstrap.min.css" />
+	<link rel="stylesheet" href="sbmptn.css" />
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="p-3 d-none d-sm-block">
+			<div class="row">
+				<div class="col-12 col-sm-5 d-none d-sm-block">
+					<div class="text-center">
+						<img src="images/logo-home.png" class="img-fluid" alt="Logo LTMPT" />
+					</div>
+				</div>
+				<div class="col-12 col-sm-7 d-none d-sm-block">
+					<div class="text-center">
+						<img src="images/sponsor.png" class="img-fluid" alt="Logo Sponsor" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="p-1 d-block d-sm-none">
+			<div class="row">
+				<div class="col-12 d-block d-sm-none">
+					<div class="row ml-1 mt-2">
+						<div class="col-12">
+							<div class="text-center">
+								<img src="images/logo-home.png" class="img-fluid" alt="Logo LTMPT" />
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="text-center">
+								<img src="images/sponsor.png" class="img-fluid" alt="Logo Sponsor" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm">
+				<div class="header-bottom-line"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<div class="marquee"></div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container" id="main" style="display: block;">
+		<div class="void"></div>
+		<div class="row m-1">
+			<div class="col-12 text-center">
+				<span class="title">PENGUMUMAN HASIL SELEKSI SBMPTN LTMPT 2021</span>
+			</div>
+		</div>
+		<div class="void"></div>
+
+		<div class="row mx-auto box-width m-1" id="error" style="display: none;">
+			<div class="col-12 text-center">
+				<div class="alert alert-danger" id="error-msg">
+		        </div>
+			</div>
+			<div class="void"></div>
+		</div>
+
+		<div class="card card-block bg-faded mx-auto box-width">
+			<div class="card-header">
+				<strong>Masukkan nomor peserta UTBK-SBMPTN dan tanggal lahir Anda.</strong>	
+			</div>
+			<div class="card-body">
+				<div class="form-group">
+					<label for="nopes">Nomor peserta UTBK-SBMPTN</label>
+					<input type="number" id="nopes" class="form-control no-spinners" tabindex="1" size="12" autocomplete="off">
+					<small id="nopes-help" class="form-text text-muted">Masukkan 12-digit nomor peserta UTBK-SBMPTN Anda.</small>
+				</div>
+				<div class="form-group">
+					<label>Tanggal lahir</label>
+					<div class="form-row">
+						<div class="col">
+							<input type="number" id="day" class="form-control no-spinners" tabindex="2" maxlength="2"  size="2" autocomplete="off" placeholder="dd">
+							<small id="day-help" class="form-text text-muted">Tanggal (2 digit): 01-31</small>
+						</div>
+						<div class="col">
+							<input type="number" id="month" class="form-control no-spinners" tabindex="3" maxlength="2"  size="2" autocomplete="off" placeholder="mm">
+							<small id="month-help" class="form-text text-muted">Bulan (2 digit): 01-12</small>
+						</div>
+						<div class="col">
+							<input type="number" id="year" class="form-control no-spinners" tabindex="4" maxlength="4"  size="4" autocomplete="off" placeholder="yyyy">
+							<small id="year-help" class="form-text text-muted">Tahun (4 digit): 1978-2011</small>
+						</div>
+					</div>
+				</div>
+				<button id="search" class="btn btn-primary" type="submit">Lihat Hasil</button>
+				<br>
+			</div>
+		</div>
+		<p class="text-center"><small class="text-muted">&copy; 2021. Lembaga Tes Masuk Perguruan Tinggi</small></p>
+	
+	</div>
+
+	<div class="container" id="accepted" style="display: none;">
+		<div class="void"></div>
+		<div class="row m-1">
+			<div class="col-12 text-center">
+				<span class="title">PENGUMUMAN HASIL SELEKSI SBMPTN LTMPT 2021</span>
+			</div>
+		</div>
+		<div class="void"></div>
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						<img id="qr-terima" class="img-fluid" src="">
+					</div>
+					<div class="col-12 col-sm-8">
+						<div class="container" style="background-color: #f8f8f8; padding:15px;">
+							<div class="row no-gutters">
+								<div class="col-auto col-sm-3">
+									Nomor peserta
+								</div>
+								<div class="col-6 col-sm-1">
+									:
+								</div>
+								<div class="col-12 col-sm-8" style="font-weight: bold;">
+									<span id="no-peserta-diterima"></span>
+								</div>
+							</div>
+							<div class="row no-gutters">
+								<div class="col-auto col-sm-3">
+									Nama
+								</div>
+								<div class="col-6 col-sm-1">
+									:
+								</div>
+								<div class="col-12 col-sm-8" style="font-weight: bold;">
+									<span id="nama-peserta-diterima"></span>
+								</div>
+							</div>
+							<div class="row no-gutters">
+								<div class="col-auto col-sm-3">
+									Tanggal lahir
+								</div>
+								<div class="col-6 col-sm-1">
+									:
+								</div>
+								<div class="col-12 col-sm-8" style="font-weight: bold;">
+									<span id="tgllahir-peserta-diterima"></span>
+								</div>	
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-12">
+									<span style="font-size: 1.1em;">Selamat! Anda dinyatakan lulus seleksi SBMPTN LTMPT 2021 di</span>
+								</div>
+							</div>
+							<div class="row no-gutters">
+								<div class="col-auto col-sm-3">
+									PTN
+								</div>
+								<div class="col-6 col-sm-1">
+									:
+								</div>
+								<div class="col-12 col-sm-8">
+									<span style="font-size: 1.1em; font-weight: bold;"><span id="kode-ptn-terima"></span> - <span id="nama-ptn-terima"></span></span>
+								</div>
+							</div>
+							<div class="row no-gutters">
+								<div class="col-auto col-sm-3">
+									Program Studi
+								</div>
+								<div class="col-6 col-sm-1">
+									:
+								</div>
+								<div class="col-12 col-sm-8">
+									<span style="font-size: 1.1em; font-weight: bold;"><span id="kode-prodi-terima"></span> - <span id="nama-prodi-terima"></span></span>
+								</div>
+							</div>
+							<br>
+							<div class="row" id="bidik-misi" style="display: none;">
+								<div class="col-12">
+									<p style="color: red;">Anda sebagai pendaftar  Program  Indonesia  Pintar  Pendidikan  Tinggi,  calon  pemegang  Kartu Indonesia Pintar Kuliah (KIP Kuliah) harus lolos verifikasi terhadap data akademik dan verifikasi  data  ekonomi  melalui  dokumen  dan/atau  kunjungan  ke  alamat  tinggal Peserta.</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-12">
+									<span>Persyaratan pendaftaran ulang calon mahasiswa baru dapat dilihat di <a id="url-daftar" target="_blank" href="">sini</a>.</span>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-12">
+									<span>Anda dapat mencetak kembali Kartu Tanda Peserta UTBK-SBMPTN 2021 di <a target="_blank" href="https://portal.ltmpt.ac.id">sini</a>.</span>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-12">
+									<a class="btn btn-block btn-info btn-wrap-text flash-button" target="_blank" href="pengumuman_peserta_lulus.pdf">UNDUH PENGUMUMAN KETUA LTMPT (PDF)</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-footer">
+				<a id="accepted-back" class="btn btn-block btn-success" href="">Kembali ke pencarian</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container" id="not-accepted" style="display: none;">
+		<div class="void"></div>
+		<div class="row m-1">
+			<div class="col-12 text-center">
+				<span class="title">PENGUMUMAN HASIL SELEKSI SBMPTN 2021</span>
+			</div>
+		</div>
+		<div class="void"></div>
+		<div class="card card-block bg-faded mx-auto">
+			<div class="card-body">
+				<p class="text-center" style="font-size: 1em;">
+					PESERTA ATAS NAMA <strong><span id="nama-peserta-tidak-terima"></span></strong> DENGAN NOMOR PESERTA <strong><span id="no-peserta-tidak-diterima"></span></strong> DINYATAKAN <strong>TIDAK LULUS</strong> SELEKSI SBMPTN LTMPT 2021.
+				</p>
+				<p class="text-center" style="font-weight: bold; font-size: 1.5em;">JANGAN PUTUS ASA DAN TETAP SEMANGAT!</p>
+			</div>
+			<div class="card-footer">
+				<a id="not-accepted-back" class="btn btn-block btn-success" href="">Kembali ke pencarian</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="void"></div>
+
+	<!-- footer class="footer">
+      <div class="container">
+        <p class="text-muted text-center">Panitia Pusat SBMPTN 2021</p>
+      </div>
+    </footer -->
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="sbmptn-1.0.min.js"></script>
+
+	<noscript>
+		<meta http-equiv="refresh" content="0; url=/nojs.html" />
+	</noscript>
+</body>
+</html>

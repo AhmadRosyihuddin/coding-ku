@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Covid-19</title>
+	<style>
+		h1{
+			font-family: cursive;
+			color: white;
+		}
+		.container{
+			border: 3px solid white;
+			width: 600px;
+			height: 500px;
+			background-color: blue;
+			border-radius: 30px;
+			padding-top: 1px;
+			padding-left: 20px;
+			padding-right: 20px;
+			margin: auto;
+		}
+		.kotak{
+			width: 590px;
+			height: 250px;
+			background-color: yellow;
+			border-radius: 25px;
+			padding: 5px;
+			border: 2px solid black;
+		}
+		.p{
+			text-align: left;
+			color: white;
+			font-weight: bold;
+			font-family: cursive;
+
+
+		}
+		.p1{
+			font-size: 15px;
+			color: red;
+			padding-left: 105px;
+
+		}
+		.button1{
+			float: left;
+			width: 100px;
+
+		}
+		.input1{
+			width: 240px;
+			border: 1px solid grey;
+		}
+		div{
+			padding: 10px;
+		}
+	</style>
+<body bgcolor="grey">
+	<div class="container">
+		<h1>Form Deteksi COVID-19</h1>
+		<p class="p">Authors :</p>
+		<p class="p">Nama : Ahmad Rosyihuddin</p>
+		<p class="p">NIM : 200411100126</p>
+		<div class="kotak">
+			<form action="/action_page.php" method="get" id="utama" style="display: block;">
+				<table>
+					<tr>
+						<td><label for="nama">Nama : </label></td>
+						<td><input class="input1" type="text" id="identitas" placeholder="Nama" value="" onkeyup="cek(value)"></td>
+					</tr>
+					<tr>	
+						<td><label for="tgl">Tanggal Lahir : </label></td>
+						<td><input class="input1" type="date" id="lahir" value="#" onchange="cek(Number(value))"><br></td>
+					</tr>
+					<p id="p" class="p1"></p>
+				</table>
+			<!-- </form> -->
+			<div id="form1" style="display: none;">
+					<label for="gejala">Apakah Anda Mengalami :</label>
+					<p>
+						1. Demam >= 380C<br>
+						2. batuk<br>
+						3. Sakit Kepala<br>
+						4. Nyeri Tenggorokan<br>
+						5. pilek<br>
+						6. Sesak Nafas</td>
+					</p>
+					<button class="button1" type="submit" onclick="next1(value)" id="gejala" value="iya">Iya</button>
+					<button class="button1" type="submit" onclick="next1(value)" id="gejala" value="tidak">Tidak</button>
+			</div>
+
+			<div id="kegiatan1" style="display: none;">
+				<!-- <form> -->
+					<label for="waktu">14 Hari Terakhir</label>
+					<p>
+						1. Tinggal Ataua bepergian di negara/wilayah Indonesia dengan transmisi lokal<br>
+						2. tinggal atau bekerja di tempat beresiko (pengungsian, asrama, dll)<br>
+						3. Bekerja di Fasyankes, melakukan investigasi, pemantauan kasus dan kontak.
+					</p>
+					<button class="button1" type="submit" onclick="next1(value)" id="tanda" value="yes">Iya</button>
+					<button class="button1" type="submit" onclick="next1(value)" id="tanda" value="no">Tidak</button>
+				<!-- </form> -->
+			</div>
+
+			<div id="14" style="display: none;">
+				<p style="text-align: center; font-size: 30px;">Salalu Jaga Kesehatan Dan Terapkan Protokol Kesehatan Dalam Beraktivitas</p>
+				<button class="button1" id="back" type="submit" value="b" onclick="kembali(value)">Back</button>
+			</div>
+
+			<div id="mentoring" style="display: none;">
+				<p style="text-align: center; font-size: 30px;">Lakukan Mentoring kesehatan mandiri selama 14 Hari</p>
+				<button class="button1" id="tanya" type="submit" value="sudah" onclick="next1(value)">Sudah</button>
+				<button class="button1" id="tanya" type="submit" value="belum" onclick="next1(value)">Belum</button>
+			</div>
+
+			<div id="mandiri" style="display: none;">
+				<p style="text-align: center; font-size: 30px;">Lakukan Sekarang Semoga Yang Terbaik.</p>
+				<button class="button1" id="kembali" type="submit" value="c" onclick="kembali(value)">Back</button>
+			</div>
+
+
+			<div id="muncul" style="display: none;">
+				<p style="text-align: center; font-size: 30px;">Apakah Muncul Gejala?</p>
+				<button class="button1" id="tanya" type="submit" value="iyo" onclick="next1(value)">Iya</button>
+				<button class="button1" id="tanya" type="submit" value="enggak" onclick="next1(value)">Tidak</button>
+			</div>
+
+			<div id="negatif" style="display: none;">
+				<p style="text-align: center; font-size: 30px;">Selamat Anda Di nyatakan Negatif COVID-19</p>
+				<button class="button1" id="home" type="submit" value="h" onclick="kembali(value)">Back</button>
+			</div>
+
+			<div id="suspek" style="display: none;">
+				<p style="text-align: center; font-size: 30px;">SUSPEK Periksakan Diri Anda untuk di pengecekan lebih lanjut.</p>
+				<button class="button1" id="bsuspek" type="submit" value="s" onclick="kembali(value)">Back</button>
+			</div>
+
+			<div id="kegiatan2" style="display: none;">
+				<!-- <form> -->
+					<label for="waktu">14 Hari Terakhir</label>
+					<p>
+						1. Tinggal Ataua bepergian di negara/wilayah Indonesia dengan transmisi lokal<br>
+						2. tinggal atau bekerja di tempat beresiko (pengungsian, asrama, dll)<br>
+						3. Bekerja di Fasyankes, melakukan investigasi, pemantauan kasus dan kontak.
+					</p>
+					<button class="button1" type="submit" onclick="next1(value)" id="tanda" value="heem">Iya</button>
+					<button class="button1" type="submit" onclick="next1(value)" id="tanda" value="igak">Tidak</button>
+				<!-- </form> -->
+			</div>
+
+			<div id="istirahat" style="display: none;">
+				<p style="text-align: center; font-size: 30px;">Istirahat yang cukup dan periksakan diri anda ke fasilitas pelayanan kesehatan.</p>
+				<button class="button1" id="rehat" type="submit" value="i" onclick="kembali(value)">Back</button>
+			</div>
+		</form>
+
+
+			<p></p>
+			<button class="button1" id="nxt" type="submit" onclick="next()" style="display: block;">Next</button>
+		</div>
+	</div>
+
+
+	<script>
+		var a = document.getElementById('identitas').value;
+		var b =document.getElementById('lahir').value;
+		function cek(nilai){
+			var string ="string"
+			var number = 2
+			if (typeof nilai == typeof string)
+				a = nilai
+			else if (typeof nilai == typeof number)
+				b = nilai
+		}
+
+		function next(){
+			if (a == "" || b == 0){
+				document.getElementById('p').innerHTML = 'Lengkapi Data Anda';
+				if (a == "" && b == 0) {
+					document.getElementById('identitas').style.border= '1px solid red';
+					document.getElementById('lahir').style.border= '1px solid red';
+				}
+				else{
+					document.getElementById('identitas').style.border= '1px solid grey';
+					document.getElementById('lahir').style.border= '1px solid grey';
+					if (a == ""){
+						document.getElementById('identitas').style.border= '1px solid red';	
+					}
+					else if (b == 0) {
+						document.getElementById('lahir').style.border= '1px solid red';
+					}
+				}
+			}
+			else{
+				document.getElementById('utama').style.display= 'none';
+				document.getElementById('nxt').style.display= 'none';
+				document.getElementById('form1').style.display= 'block';
+			}
+		}
+
+		function next1(nilai){
+			if (nilai == 'iya'){
+				document.getElementById('form1').style.display= 'none';
+				document.getElementById('kegiatan2').style.display= 'block';
+			}
+			else if (nilai == 'tidak'){
+				document.getElementById('form1').style.display= 'none';
+				document.getElementById('kegiatan1').style.display= 'block';
+			}
+
+			else if (nilai == 'yes'){
+				document.getElementById('kegiatan1').style.display= 'none';
+				document.getElementById('mentoring').style.display= 'block';
+			}
+
+			else if (nilai == 'no') {
+				document.getElementById('kegiatan1').style.display= 'none';
+				document.getElementById('14').style.display= 'block';
+			}
+			else if (nilai == 'sudah'){
+				document.getElementById('mentoring').style.display= 'none';
+				document.getElementById('muncul').style.display= 'block';
+
+			}
+			else if (nilai == 'belum'){
+				document.getElementById('mentoring').style.display= 'none';
+				document.getElementById('mandiri').style.display= 'block';
+			}
+
+			else if (nilai == 'enggak'){
+				document.getElementById('muncul').style.display= 'none';
+				document.getElementById('negatif').style.display= 'block';
+			}
+			else if (nilai == 'iyo'){
+				document.getElementById('muncul').style.display= 'none';
+				document.getElementById('suspek').style.display= 'block';
+			}
+			else if (nilai == 'heem'){
+				document.getElementById('kegiatan2').style.display= 'none';
+				document.getElementById('suspek').style.display= 'block';
+			}
+			else if (nilai == 'igak'){
+				document.getElementById('kegiatan2').style.display= 'none';
+				document.getElementById('istirahat').style.display= 'block';
+			}
+
+		}
+
+		function kembali(nilai){
+			if (nilai == 'b'){
+				document.getElementById('back').style.display= 'none';
+				document.getElementById('14').style.display= 'none';
+				document.getElementById('utama').style.display= 'block';
+				document.getElementById('nxt').style.display= 'block';
+			}
+			else if (nilai == 'c') {
+				document.getElementById('kembali').style.display= 'none';
+				document.getElementById('mandiri').style.display= 'none';
+				document.getElementById('utama').style.display= 'block';
+				document.getElementById('nxt').style.display= 'block';
+			}
+
+			else if (nilai == 'h') {
+				document.getElementById('home').style.display= 'none';
+				document.getElementById('negatif').style.display= 'none';
+				document.getElementById('utama').style.display= 'block';
+				document.getElementById('nxt').style.display= 'block';
+			}
+			else if (nilai == 's') {
+				document.getElementById('suspek').style.display= 'none';
+				document.getElementById('bsuspek').style.display= 'none';
+				document.getElementById('utama').style.display= 'block';
+				document.getElementById('nxt').style.display= 'block';
+			}
+			else if (nilai == 'i') {
+				document.getElementById('istirahat').style.display= 'none';
+				document.getElementById('rehat').style.display= 'none';
+				document.getElementById('utama').style.display= 'block';
+				document.getElementById('nxt').style.display= 'block';
+			}
+		}
+	</script>
+</body>
+</head>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>coba</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+      }
+      nav ul {
+        list-style-type: none;
+        color: white;
+        overflow: hidden;
+        background-color: black;
+        padding: 0 20px;
+        position: relative;
+        display: inline-table;
+        width: 100%;
+      }
+
+      nav ul li{
+        float: left;
+      }
+
+      #menu:hover {
+        background: #666;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 25px 40px;
+        color: #fff;
+        text-decoration: none;
+      }
+      .drop-down{
+        display: none;
+        background-color:steelblue  ;
+        width: 132px;
+        position: absolute;
+        padding: 0px;
+      }
+
+      .drop-down li:hover{
+        width: 132px;
+        background-color: darkgray;
+      }
+    </style>
+  </head>
+  <body bgcolor="gold">
+    <nav>
+      <ul>
+        <li><a>RESTO GAK ENAK</a></li>
+        <li>
+          <a class="klik" id="menu"><i class="fas fa-utensils"> Food</i></a>
+          <ul class="drop-down">
+            <li><a href="#">Bakso</a></li>
+            <li><a href="#">Nasi Goreng</a></li>
+            <li><a href="#">Mie Ayam</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="klik" id="menu"><i class="fas fa-apple-alt"> Buah</i></a>
+          <ul class="drop-down">
+            <li><a href="#">Anggur</a></li>
+            <li><a href="#">Apel</a></li>
+            <li><a href="#">Jeruk</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="klik" id="menu"><i class="fas fa-bread-slice"> Roti</i></a>
+          <ul class="drop-down">
+            <li><a href="#">Roti Tawar</a></li>
+            <li><a href="#">Roti Brownis</a></li>
+            <li><a href="#">Roti Buaya</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <script src="https://kit.fontawesome.com/72b7006a72.js" crossorigin="anonymous"></script>
+    <script>
+      var klik = document.getElementsByClassName('klik');
+      var i;
+      for(i = 0; i < klik.length; i++){
+        klik[i].addEventListener('click',function(){
+          var konten = this.parentNode.children[1]
+          if(konten.style.display == 'block'){
+            konten.style.display = 'none'
+          }
+          else{
+            konten.style.display = 'block'
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

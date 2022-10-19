@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Looping JavaScript</title>
+</head>
+<body>
+	<h1>Looping (JavaScript)</h1>
+	<form onsubmit="return false">
+		Masukkan Angka : <input type="number" id="angka">
+		<button onclick="javloop()">Click</button>
+	</form>
+	<p id="kosong"></p>
+	<script>
+		function javloop() {
+			var kos = '';
+			var a = document.getElementById('angka').value;
+			for(let i = 0; i < a; i++){
+				kos += a + '<br>'
+			}
+			document.getElementById('kosong').innerHTML = kos;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS NAVIGASI</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: cyan;
+}
+
+.dropdown-content a {
+  color: black;
+  width: 200px;
+  height: 200px;
+}
+
+.dropdown-content a:hover {
+  background-color: blue;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body bgcolor="gold">
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li class="dropdown">
+    <a href="#" class="dropbtn">HONDA</a>
+    <div class="dropdown-content">
+      <a href="#" style="background-image: url(https://d2pa5gi5n2e1an.cloudfront.net/id/images/car_models/Honda_Brio/2/exterior/exterior_2L_1.jpg); background-size: 230px 200px;">Honda Brio</a>
+
+      <a href="#" style="background-image: url(https://d2pa5gi5n2e1an.cloudfront.net/id/images/car_models/Honda_Mobilio/3/exterior/exterior_2L_1.jpg); background-size: 230px 200px;">Honda Mobilio</a>
+
+      <a href="#" style="background-image: url(https://foto.kontan.co.id/_aO2xyy668Misx83Eq51Ts7CtSI=/smart/2021/02/19/147522509p.jpg); background-size: 230px 200px;">Honda HR-V</a>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="#" class="dropbtn">YAMAHA</a>
+    <div class="dropdown-content">
+      <a href="#" style="background-image: url(https://autonetmagz.com/wp-content/uploads/2014/01/Yamaha-Scorpio-Special-Edition-800x474.jpg); background-size: 240px 230px;">Yamaha Scorpio Z</a>
+
+      <a href="#" style="background-image: url(https://asset.kompas.com/crops/X1guw2CG4xK3pF48RYl6unPW2Vw=/1x0:468x311/750x500/data/photo/2020/03/10/5e672d3be2893.jpg); background-size: 240px 230px;">Yamaha Mio</a>
+
+      <a href="#" style="background-image: url(https://image.cermati.com/c_lpad,fl_progressive,h_360,q_80,w_640/jevzoxmpzfct8sachr5h.jpg); background-size: 240px 230px;">Yamaha Jupiter</a>
+    </div>
+  </li>
+</ul>
+</body>
+</html>

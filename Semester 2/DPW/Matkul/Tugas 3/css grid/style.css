@@ -1,0 +1,64 @@
+.container{
+	border: 4px solid blue;
+	width: 1000px;
+	margin: auto;
+	display: grid;
+	grid-template-areas: "header aside"
+	"header main"
+	"header textarea"
+	"header footer";
+	grid-template-columns: 1fr 1.5fr;
+}
+
+header{
+	grid-area: header;
+	background-image: url(foto.jpeg);
+	padding: 300px 0;
+	background-size: 400px;
+}
+
+aside{
+	padding: 20px;
+	background-color: cyan;
+}
+
+main{
+	padding: 20px;
+	height: 200px;
+	background-color: orange;
+
+}
+
+textarea{
+	grid-area: textarea;
+	width: 100%;
+	height: 145px;
+}
+
+form{
+	display: flex;
+}
+
+footer{
+	display: flex;
+	background-color: orange;
+	height: 50px;
+	justify-content: center;
+
+}
+
+.button{
+	border: none;
+	background-color: green;
+	color: white;
+	margin: auto;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 15%;
+}
+
+.button1:hover{
+	background-color: red;
+}

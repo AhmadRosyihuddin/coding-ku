@@ -14,13 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('order_details', function (Blueprint $table) {
-            $table->id('id');
-            $table->integer('id_order');
+            $table->id();
+            $table->foreignId('order_id')->constrained('orders')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('id_menu')->constrained('menus')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('jml_order');
             $table->integer('sub_total')->nullable();
             $table->timestamps();
-            $table->foreign('id_order')->references('id')->on('orders')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

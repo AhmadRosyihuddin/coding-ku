@@ -14,15 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->integer('id')->primary();
-            $table->string('nama_cus');
-            $table->char('no_meja', 5);
+            $table->id();
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('menu_id')->constrained('menus')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('total_order');
             $table->integer('total_pembayaran')->nullable();
             $table->date('tgl_order');
             $table->enum('status_order', ['Proses', 'Belum Bayar', 'Selesai']);
             $table->timestamps();
-            $table->foreign('no_meja')->references('no_meja')->on('mejas')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

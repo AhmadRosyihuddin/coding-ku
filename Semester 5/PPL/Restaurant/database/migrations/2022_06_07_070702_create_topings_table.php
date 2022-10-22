@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('mejas', function (Blueprint $table) {
-            $table->char('no_meja', 5)->primary();
-            $table->enum('status_meja', ['Used', 'Kosong']);
+        Schema::create('topings', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_toping');
+            $table->integer('stock');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mejas');
+        Schema::dropIfExists('topings');
     }
 };

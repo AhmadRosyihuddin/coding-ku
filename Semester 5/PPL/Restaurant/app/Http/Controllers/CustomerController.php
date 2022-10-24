@@ -14,15 +14,14 @@ class CustomerController extends Controller
 {
     public function login()
     {
-        $meja = Meja::where('status_meja', 'kosong')->get();
-        return View('login.cusLogin', compact('meja'), ['title' => 'Login']);
+        return View('login.cusLogin', ['title' => 'Login']);
     }
 
     public function store(StoreCustomerRequest $request)
     {
         $credentials = $request->validate([
             'nama_cus' => 'required',
-            'no_meja' => 'required'
+            'password' => 'required'
         ]);
 
         $request->session()->regenerate();
